@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SEOscribe - Backlink Analyser</title>
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.5/jquery-jvectormap.min.css" type="text/css" media="screen"/>
+  
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SEO Scribe</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>SEO Tool Integration</span></a>
+            </li>
+
+
+            <li class="nav-item">
+               <a class="nav-link" href="serp.html">
+               <i class="fas fa-fw fa-tachometer-alt""></i>
+               <span>SERP Preview</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
+
+                    <!-- Topbar Search -->
+                    <form id="domainUrlForm"
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" id="domainUrl" class="form-control bg-light border-0 small" placeholder="Enter domain url...."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit" id="submit-btn">Get Backlinks</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Backlinks</h1>
+                    <p class="mb-4">Use this to uncover all the backlinks pointing to a specific URL or a full domain along with domain and page authority</p>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Page Authority
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="pg-authority">0</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Domain Authority
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="domain-authority">0</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Backlinks
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="total-backlinks">0</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                
+                   <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Backlink Table</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Backlink Distribution on Authority Score</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-bar">
+                                        <canvas id="myBarChart"></canvas>
+                                </div>
+                            </div>
+                    </div>
+      
+                    <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Top Countries</h6>
+                            </div>
+                            <div class="card-body">
+                                <div id="world-map" style="height: 600px;"></div>
+                            </div>
+                    </div>
+                        
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Kavita Maurya 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="assets/jquery-1.8.2.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+
+
+    <script src="jquery-jvectormap.js"></script>
+    <script src="lib/jquery-mousewheel.js"></script>
+    <script src="src/jvectormap.js"></script>
+    <script src="src/abstract-element.js"></script>
+    <script src="src/abstract-canvas-element.js"></script>
+    <script src="src/abstract-shape-element.js"></script>
+    <script src="src/svg-element.js"></script>
+    <script src="src/svg-group-element.js"></script>
+    <script src="src/svg-canvas-element.js"></script>
+    <script src="src/svg-shape-element.js"></script>
+    <script src="src/svg-path-element.js"></script>
+    <script src="src/svg-circle-element.js"></script>
+    <script src="src/svg-image-element.js"></script>
+    <script src="src/svg-text-element.js"></script>
+    <script src="src/vml-element.js"></script>
+    <script src="src/vml-group-element.js"></script>
+    <script src="src/vml-canvas-element.js"></script>
+    <script src="src/vml-shape-element.js"></script>
+    <script src="src/vml-path-element.js"></script>
+    <script src="src/vml-circle-element.js"></script>
+    <script src="src/vml-image-element.js"></script>
+    <script src="src/map-object.js"></script>
+    <script src="src/region.js"></script>
+    <script src="src/marker.js"></script>
+    <script src="src/vector-canvas.js"></script>
+    <script src="src/simple-scale.js"></script>
+    <script src="src/ordinal-scale.js"></script>
+    <script src="src/numeric-scale.js"></script>
+    <script src="src/color-scale.js"></script>
+    <script src="src/legend.js"></script>
+    <script src="src/data-series.js"></script>
+    <script src="src/proj.js"></script>
+    <script src="src/map.js"></script>
+    <script src="assets/jquery-jvectormap-world-mill-en.js"></script>
+
+
+    <script>
+    const domainUrlForm = document.getElementById('domainUrlForm');
+    const tableContainer = document.getElementById('dataTable');
+    const pgContainer = document.getElementById('pg-authority');
+    const domainContainer = document.getElementById('domain-authority');
+    const backlinkContainer = document.getElementById('total-backlinks');
+    const submitBtn = document.getElementById('submit-btn');
+    const submitIcon = document.createElement('i');
+    let dynamicTable;
+
+
+    const nf = new Intl.NumberFormat('en-US');
+
+    var myBarChart = null;
+
+    function barChartInit(datos) {
+          let ctx = document.getElementById("myBarChart").getContext("2d");
+          myBarChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ["0-20", "21-40", "41-60", "61-80", "81-100"],
+                datasets: [{
+                  label: "Backlink Percent",
+                  backgroundColor: "#4e73df",
+                  hoverBackgroundColor: "#2e59d9",
+                  borderColor: "#4e73df",
+                  data: datos,
+                }],
+              },
+              options: {
+                maintainAspectRatio: false,
+                layout: {
+                  padding: {
+                    left: 10,
+                    right: 25,
+                    top: 25,
+                    bottom: 0
+                  }
+                },
+                scales: {
+                  xAxes: [{
+                    time: {
+                      unit: 'month'
+                    },
+                    gridLines: {
+                      display: false,
+                      drawBorder: false
+                    },
+                    ticks: {
+                      maxTicksLimit: 6
+                    },
+                    maxBarThickness: 25,
+                  }],
+                  yAxes: [{
+                    ticks: {
+                      min: 0,
+                      max: 100,
+                      maxTicksLimit: 5,
+                      padding: 10,
+                      callback: function(value, index, values) {
+                        return value + '%';
+                      }
+                    },
+                    gridLines: {
+                      color: "rgb(234, 236, 244)",
+                      zeroLineColor: "rgb(234, 236, 244)",
+                      drawBorder: false,
+                      borderDash: [2],
+                      zeroLineBorderDash: [2]
+                    }
+                  }],
+                },
+                legend: {
+                  display: false
+                },
+                tooltips: {
+                  titleMarginBottom: 10,
+                  titleFontColor: '#6e707e',
+                  titleFontSize: 14,
+                  backgroundColor: "rgb(255,255,255)",
+                  bodyFontColor: "#858796",
+                  borderColor: '#dddfeb',
+                  borderWidth: 1,
+                  xPadding: 15,
+                  yPadding: 15,
+                  displayColors: false,
+                  caretPadding: 10,
+                  callbacks: {
+                    label: function(tooltipItem, chart) {
+                      var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                      return datasetLabel + ': ' + tooltipItem.yLabel + '%';
+                    }
+                  }
+                },
+              }
+            });
+
+        }
+
+
+    function addData(chart, data) {
+      chart.data.datasets.forEach((dataset, i) => {
+        dataset.data = data;
+      });
+      chart.update();
+    }
+
+    function removeData(chart) {
+      chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+      });
+      chart.update();
+    }
+
+    barChartInit([0, 0, 0, 0, 0]);
+
+   domainUrlForm.addEventListener('submit', (event) => {
+   event.preventDefault();
+
+   submitBtn.innerHTML = "Fetching...";
+   submitIcon.classList.add('fa', 'fa-spinner', 'fa-spin');
+   submitBtn.appendChild(submitIcon)
+
+  const domainUrl = document.getElementById('domainUrl').value;
+
+  fetch('http://127.0.0.1:3000/analyzeDomainUrl', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ text: domainUrl })
+  })
+  .then(response => response.json())
+  .then(data => {
+
+    submitBtn.innerHTML = "Get Backlinks";
+    submitIcon.classList.remove('fa', 'fa-spinner', 'fa-spin');
+
+
+    // Generate page authority
+    const pageAuthority = data.authority.page_authority;
+    pgContainer.innerHTML = `${pageAuthority}`;
+
+    // Generate domain authority
+    const domainAuthority = data.authority.domain_authority;
+    domainContainer.innerHTML = `${domainAuthority}`;
+
+    // Generate total backlinks
+    const totalBacklinks = nf.format(data.authority.backlinks);
+    backlinkContainer.innerHTML = `${totalBacklinks}`;
+
+
+    const backlinksData = data.backlinks.urls
+
+    let tableHeader = '<thead><tr>';
+    tableHeader += '<th>URL</th><th>Last Visited</th><th>Page authority</th><th>Domain authority</th>';
+    tableHeader += '</tr></thead>';
+
+
+    // Check if the DataTable is already initialized
+    if ($.fn.dataTable.isDataTable('#dataTable')) {
+    // Destroy the existing DataTable to reinitialize
+        $('#dataTable').DataTable().clear().destroy();
+    } 
+
+
+  // Create the table body rows
+    let tableBody = '<tbody>';
+    backlinksData.forEach((item) => {
+      tableBody += '<tr>';
+      tableBody += '<td><a href="' + item['url'] + '" target="_blank">'+ item['url'] +'</a></td>';
+      tableBody += '<td class="nowrap">' + item['last_visited'] + '</td>';
+      tableBody += '<td>' + item['page_authority'] + '</td>';
+      tableBody += '<td>' + item['domain_authority'] + '</td>';
+      tableBody += '</tr>';
+    });
+    tableBody += '</tbody>';
+
+    // Combine the header and body to form the complete table HTML
+    let tableHTML = tableHeader + tableBody;
+
+    // Set the table HTML inside the #dynamicTable element
+    tableContainer.innerHTML = tableHTML;
+
+    $('#dataTable').DataTable();
+
+    removeData(myBarChart);
+    var bucketMap = data.backlinks.bucket_map
+    var vals = Object.values(bucketMap)
+    addData(myBarChart, vals);
+
+    const countryArr = data.authority.top_countries;
+
+    const backlinksMap = new Map(
+        countryArr.map(obj => {    
+            return [obj.code, obj.count]; 
+        })
+    );
+
+    const latLonArray = countryArr.map(({ lat, lon }) => ({ latLng: [lat, lon] }));
+
+    const backlinkMapContainer = document.getElementById('world-map');
+    backlinkMapContainer.innerHTML = ''
+    $('#world-map').vectorMap({
+                map: 'world_mill_en',
+                backgroundColor: '#b1b3b3',
+                zoomOnScroll: true,
+                zoomMax: 10,
+                markers: latLonArray,
+                markerStyle: {
+                          initial: {
+                            fill: '#960960',
+                            stroke: '#383f47'
+                        }
+                    },
+                series: {
+                    regions: [{
+                        values: backlinksMap,
+                        scale: ['#C8EEFF', '#0071A4'],
+                        normalizeFunction: 'polynomial',
+                    }]
+                },
+
+                onRegionTipShow: function (e, el, code) {
+                    backlinks = 0
+                    if (backlinksMap.has(code)) {
+                      backlinks = backlinksMap.get(code)
+                    }
+                    el.html(el.html() + ' (Backlinks: ' + backlinks + ')');
+                }
+            });
+    
+
+  })
+  .catch(error => {
+    submitBtn.innerHTML = "Get Backlinks";
+    submitIcon.classList.remove('fa', 'fa-spinner', 'fa-spin');
+    console.log('Error:', error);
+    alert('An error occurred. Please try again later.');
+  });
+});
+  </script>
+
+  <script>
+      const backlinksMap = new Map([
+        ]);
+          
+            $('#world-map').vectorMap({
+                map: 'world_mill_en',
+                backgroundColor: '#b1b3b3',
+                zoomOnScroll: true,
+                zoomMax: 10,
+                markers: [
+                ],
+                markerStyle: {
+                          initial: {
+                            fill: '#960960',
+                            stroke: '#383f47'
+                        }
+                    },
+                series: {
+                    regions: [{
+                        values: {
+                        },
+                        scale: ['#C8EEFF', '#0071A4'],
+                        normalizeFunction: 'polynomial',
+                    }]
+                },
+
+                onRegionTipShow: function (e, el, code) {
+                    backlinks = 0
+                    if (backlinksMap.has(code)) {
+                      backlinks = backlinksMap.get(code)
+                    }
+                    el.html(el.html() + ' (Backlinks: ' + backlinks + ')');
+                }
+            });
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+    "status": "ok",
+    "result": 1,
+    "data": {
+        "tool name": "Authority Score",
+        "data": [
+            {
+                "URL": "https:\/\/searchengineland.com\/",
+                "Page Authority Score": 90
+            },
+            {
+                "Domain": "searchengineland.com",
+                "Domain Authority Score": 89
+            }
+        ]
+    }
+}

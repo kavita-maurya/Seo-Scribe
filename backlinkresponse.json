@@ -1,0 +1,279 @@
+{
+    "status": "ok",
+    "result": 1,
+    "data": {
+        "tool name": "Backlinks",
+        "input URL": "searchengineland.com",
+        "data": [
+            {
+                "Backlink": {
+                    "URL": "https:\/\/developers.google.com\/search\/blog\/2012\/01\/page-layout-algorithm-improvement",
+                    "Domain": "developers.google.com",
+                    "Spam score": 15,
+                    "Page authority": 68,
+                    "Domain authority": 98,
+                    "Link type": "anchor",
+                    "Anchor text": "we've mentioned previously",
+                    "Alt": null,
+                    "Dofollow": true,
+                    "First seen": "2020-11-30 07:44:49 +00:00",
+                    "Last seen": "2022-03-20 11:52:03 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": false,
+                    "External links on page": 27,
+                    "Link attribute": null,
+                    "IP": "142.250.186.110"
+                },
+                "Landing page": {
+                    "URL": "http:\/\/searchengineland.com\/google-may-penalize-ad-heavy-pages-100601",
+                    "Spam score": 0,
+                    "Status code": 301
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/core.trac.wordpress.org\/ticket\/52900",
+                    "Domain": "core.trac.wordpress.org",
+                    "Spam score": 15,
+                    "Page authority": 42,
+                    "Domain authority": 97,
+                    "Link type": "anchor",
+                    "Anchor text": "\u200bGoogle will be testing the IndexNow protocol",
+                    "Alt": null,
+                    "Dofollow": true,
+                    "First seen": "2021-11-14 03:48:55 +00:00",
+                    "Last seen": "2022-05-15 01:31:21 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": false,
+                    "External links on page": 58,
+                    "Link attribute": null,
+                    "IP": "198.143.164.246"
+                },
+                "Landing page": {
+                    "URL": "https:\/\/searchengineland.com\/google-is-testing-the-indexnow-protocol-for-sustainability-375932",
+                    "Spam score": 0,
+                    "Status code": 200
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/github.com\/vipulnaik\/working-drafts\/blob\/master\/wikipediaviews\/revisiting-the-great-decline-in-wikipedia-pageviews.md",
+                    "Domain": "github.com",
+                    "Spam score": 5,
+                    "Page authority": 18,
+                    "Domain authority": 95,
+                    "Link type": "anchor",
+                    "Anchor text": "http:\/\/searchengineland.com\/new-google-eye-tracking-study-shows-downfall-golden-triangle-205274",
+                    "Alt": null,
+                    "Dofollow": false,
+                    "First seen": "2021-10-09 07:15:12 +00:00",
+                    "Last seen": "2022-05-03 04:35:27 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": true,
+                    "External links on page": 50,
+                    "Link attribute": [
+                        "nofollow"
+                    ],
+                    "IP": "140.82.121.4"
+                },
+                "Landing page": {
+                    "URL": "http:\/\/searchengineland.com\/new-google-eye-tracking-study-shows-downfall-golden-triangle-205274",
+                    "Spam score": 0,
+                    "Status code": 403
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/thesidenoteblog.wordpress.com\/2011\/03\/21\/%E2%80%9Cblack-hat%E2%80%9D-seo-tactics-lessens-learned-from-jcpenney\/",
+                    "Domain": "thesidenoteblog.wordpress.com",
+                    "Spam score": 25,
+                    "Page authority": 0,
+                    "Domain authority": 92,
+                    "Link type": "anchor",
+                    "Anchor text": "immediate displacement of the company\u2019s search engine consultant firm",
+                    "Alt": null,
+                    "Dofollow": true,
+                    "First seen": "2019-01-22 08:58:38 +00:00",
+                    "Last seen": "2022-05-01 00:02:28 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": false,
+                    "External links on page": 57,
+                    "Link attribute": null,
+                    "IP": "192.0.78.13"
+                },
+                "Landing page": {
+                    "URL": "http:\/\/searchengineland.com\/googles-action-against-link-schemes-continues-overstock-com-and-forbes-com-latest-casualities-conductor-exits-business-65926",
+                    "Spam score": 0,
+                    "Status code": 301
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/statcounter.com\/learning-center\/seo\/backlinks\/",
+                    "Domain": "statcounter.com",
+                    "Spam score": 0,
+                    "Page authority": 48,
+                    "Domain authority": 91,
+                    "Link type": "anchor",
+                    "Anchor text": "confirmed by Google in 2016",
+                    "Alt": null,
+                    "Dofollow": true,
+                    "First seen": "2019-06-19 19:58:03 +00:00",
+                    "Last seen": "2022-05-15 03:57:33 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": false,
+                    "External links on page": 10,
+                    "Link attribute": null,
+                    "IP": "104.20.229.67"
+                },
+                "Landing page": {
+                    "URL": "https:\/\/searchengineland.com\/now-know-googles-top-three-search-ranking-factors-245882",
+                    "Spam score": 0,
+                    "Status code": 200
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/en.wikipedia.org\/wiki\/YouTube",
+                    "Domain": "en.wikipedia.org",
+                    "Spam score": 50,
+                    "Page authority": 90,
+                    "Domain authority": 90,
+                    "Link type": "anchor",
+                    "Anchor text": "\"Google Testing Comment Search On YouTube\"",
+                    "Alt": null,
+                    "Dofollow": false,
+                    "First seen": "2021-02-25 02:20:23 +00:00",
+                    "Last seen": "2022-05-15 09:56:31 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": true,
+                    "External links on page": 922,
+                    "Link attribute": [
+                        "nofollow"
+                    ],
+                    "IP": "91.198.174.192"
+                },
+                "Landing page": {
+                    "URL": "https:\/\/searchengineland.com\/google-testing-youtube-comment-search-27900",
+                    "Spam score": 0,
+                    "Status code": 403
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/business.linkedin.com\/marketing-solutions\/blog\/what-s-trending-in-marketing--top-content-of-the-week\/2017\/what_s-trending--let-data-take-the-wheel-and-drive-your-marketin",
+                    "Domain": "business.linkedin.com",
+                    "Spam score": 0,
+                    "Page authority": 6,
+                    "Domain authority": 90,
+                    "Link type": "anchor",
+                    "Anchor text": "19 Technical SEO Facts for Beginners",
+                    "Alt": null,
+                    "Dofollow": false,
+                    "First seen": "2019-02-20 04:56:45 +00:00",
+                    "Last seen": "2021-09-26 14:43:56 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": false,
+                    "External links on page": 35,
+                    "Link attribute": [
+                        "nofollow"
+                    ],
+                    "IP": "108.174.11.37"
+                },
+                "Landing page": {
+                    "URL": "https:\/\/searchengineland.com\/19-technical-seo-facts-beginners-282949",
+                    "Spam score": 0,
+                    "Status code": 200
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/apps.apple.com\/us\/app\/search-engine-land\/id1015557452",
+                    "Domain": "apps.apple.com",
+                    "Spam score": 10,
+                    "Page authority": 51,
+                    "Domain authority": 90,
+                    "Link type": "anchor",
+                    "Anchor text": "developer\u2019s privacy policy",
+                    "Alt": null,
+                    "Dofollow": true,
+                    "First seen": "2019-10-16 10:42:28 +00:00",
+                    "Last seen": "2022-02-08 09:16:00 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": true,
+                    "External links on page": 26,
+                    "Link attribute": null,
+                    "IP": "104.111.214.42"
+                },
+                "Landing page": {
+                    "URL": "http:\/\/www.searchengineland.com\/privacypolicy",
+                    "Spam score": 0,
+                    "Status code": 403
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/creativecommons.org\/2007\/05\/03\/creative-commons-for-newspapers-scientists-film-students-and-wikipedia-seoers\/",
+                    "Domain": "creativecommons.org",
+                    "Spam score": 0,
+                    "Page authority": 8,
+                    "Domain authority": 89,
+                    "Link type": "anchor",
+                    "Anchor text": "Wikipedia SEOers",
+                    "Alt": null,
+                    "Dofollow": true,
+                    "First seen": "2020-08-05 13:18:14 +00:00",
+                    "Last seen": "2022-04-30 18:41:50 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": true,
+                    "External links on page": 10,
+                    "Link attribute": null,
+                    "IP": "104.20.150.16"
+                },
+                "Landing page": {
+                    "URL": "http:\/\/searchengineland.com\/070503-065513.php",
+                    "Spam score": 0,
+                    "Status code": 403
+                }
+            },
+            {
+                "Backlink": {
+                    "URL": "https:\/\/blog.verisign.com\/domain-names\/more-brands-are-turning-to-com-for-international-appeal\/",
+                    "Domain": "blog.verisign.com",
+                    "Spam score": 0,
+                    "Page authority": 0,
+                    "Domain authority": 88,
+                    "Link type": "anchor",
+                    "Anchor text": "contain content relevant to that country",
+                    "Alt": null,
+                    "Dofollow": true,
+                    "First seen": "2019-02-23 15:03:40 +00:00",
+                    "Last seen": "2022-05-14 23:56:38 +00:00",
+                    "Link is lost": false,
+                    "Link is new": false,
+                    "Broken status": true,
+                    "External links on page": 15,
+                    "Link attribute": [
+                        "noopener",
+                        "noreferrer"
+                    ],
+                    "IP": "69.58.187.25"
+                },
+                "Landing page": {
+                    "URL": "http:\/\/searchengineland.com\/googles-matt-cutts-sites-with-geo-targeted-domains-should-contain-content-relevant-to-the-specified-country-168258",
+                    "Spam score": 0,
+                    "Status code": 403
+                }
+            }
+        ]
+    }
+}
