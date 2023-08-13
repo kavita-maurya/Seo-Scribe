@@ -9,10 +9,11 @@ from six.moves import urllib
 from geopy.geocoders import Nominatim
 import pycountry
 import seo_score
+import random
 
 app = Flask(__name__)
-openai.api_key = "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"
-seoApiKey = 'a9c5a917-d645-470a-96b0-8f2436ed2078'
+list_of_openai_api_keys = []
+seoApiKey = ''
 geolocator = Nominatim(user_agent="Geolocation")
 
 
@@ -128,8 +129,12 @@ def analyze_domain_url():
 
 
 def analyze_keywords(text):
+    print("Analyze the keywords:")
     prompt = f'Analyze the keywords:\n\n{text}\n\nKeywords:'
     try:
+        k = random.choice(list_of_openai_api_keys)
+        print(k)
+        openai.api_key = k
         response = openai.Completion.create(
             engine='text-davinci-003',
             prompt=prompt,
@@ -174,6 +179,10 @@ def calculate_quality_score(text):
 def analyze_quality(text):
     prompt = f'Analyze the overall quality of the blog post:\n\n{text}'
     try:
+        print("Analyze the overall quality of the blog post")
+        k = random.choice(list_of_openai_api_keys)
+        print(k)
+        openai.api_key = k
         response = openai.Completion.create(
             engine='text-davinci-003',
             prompt=prompt,
@@ -193,6 +202,10 @@ def analyze_quality(text):
 def give_suggestions(text):
     prompt = f'Give some top suggestions to enhance the blog post concisely:\n\n{text}'
     try:
+        print("Give some top suggestions to enhance the blog post concisely:")
+        k = random.choice(list_of_openai_api_keys)
+        print(k)
+        openai.api_key = k
         response = openai.Completion.create(
             engine='text-davinci-003',
             prompt=prompt,
@@ -212,6 +225,10 @@ def give_suggestions(text):
 def on_page_optimization_suggestion(text):
     prompt = f'Provide concise recommendations to optimize on-page elements such as meta tags, headings, URL structure, image tags, and internal linking for the given blog post:\n\n{text}'
     try:
+        print("Provide concise recommendations to optimize on-page elements such as meta tags")
+        k = random.choice(list_of_openai_api_keys)
+        print(k)
+        openai.api_key = k
         response = openai.Completion.create(
             engine='text-davinci-003',
             prompt=prompt,
